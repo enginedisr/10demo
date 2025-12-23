@@ -1,0 +1,80 @@
+{
+  "recipe_id": "1.3",
+  "generated_at": "2025-12-23T00:00:00Z",
+  "verdict": "CONDITIONAL",
+  "verdict_rationale": "Only 1 of 4 primary KPIs passes thresholds. Pain intensity is strong (82/100) but workarounds (33%), recency (46%), and trend growth fail. Critical limitation: single platform coverage (Reddit only) vs required 3+ platforms. Recommend collecting additional data from G2, Twitter/X, and LinkedIn before proceeding to customer interviews.",
+  "kpis": [
+    {
+      "id": "pain_intensity",
+      "name": "Pain Intensity",
+      "score": 82,
+      "passed": true,
+      "threshold": {
+        "go": 70,
+        "conditional": 60
+      },
+      "weight": 0.25,
+      "evidence": "Average 8.2/10 severity from 87 Reddit mentions. Key signals: 40-60% lead loss, $3,500/month costs, 90-120 second abandonment, 3+ months unproductive demoing. 5 pain themes identified: Time/Resource Drain (43 mentions), Conversion Failures (38), Lead Loss (29), Scaling Issues (26), Tool Gaps (24).",
+      "unit": "/10",
+      "score_raw": "8.2/10"
+    },
+    {
+      "id": "workarounds",
+      "name": "Active Workarounds",
+      "score": 33,
+      "passed": false,
+      "threshold": {
+        "go": 60,
+        "conditional": 50
+      },
+      "weight": 0.25,
+      "evidence": "29 of 87 mentions (33.3%) describe DIY fixes including AI agents, banning demos for 60 days, Gamma AI for deck creation, product tour platforms (Storylane, Appcues, Pendo), and custom automation scripts. Workarounds are sophisticated but percentage below threshold.",
+      "unit": "%"
+    },
+    {
+      "id": "recency",
+      "name": "Problem Recency",
+      "score": 46,
+      "passed": false,
+      "threshold": {
+        "go": 70,
+        "conditional": 60
+      },
+      "weight": 0.25,
+      "evidence": "40 of 87 mentions (46.0%) in last 90 days (March 24 - June 22, 2025). Monthly distribution: Jan 18, Feb 14, Mar 10, Apr 8, May 20 (peak), Jun 17. Latest mention is 6 months old from collection date (June 22 vs Dec 23).",
+      "unit": "%"
+    },
+    {
+      "id": "trend_growth",
+      "name": "Trend Growth",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 20,
+        "conditional": 10
+      },
+      "weight": 0.25,
+      "evidence": "YoY growth: N/A (no 2024 baseline data). MoM trend: 1 consecutive increase (Apr→May +150%), insufficient for threshold (need ≥3). Direction: STABLE (fluctuating but sustained interest over 6 months). Cannot validate growth trend without historical data.",
+      "unit": "% YoY"
+    },
+    {
+      "id": "coverage",
+      "name": "Data Coverage",
+      "score": 50,
+      "passed": false,
+      "threshold": {
+        "go": 100,
+        "conditional": 75
+      },
+      "weight": 0.0,
+      "evidence": "87 mentions from 1 platform (Reddit: r/sales, r/SaaS, r/ProductManagement, r/startups). Meets mention threshold (≥50) but fails platform diversity (need ≥3 platforms). Tavily API exhausted - unable to collect from G2, Capterra, Twitter/X, LinkedIn, GitHub, Stack Overflow.",
+      "unit": "quality score"
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "passed": 1,
+    "failed": 3,
+    "pass_rate": 25.0
+  }
+}
